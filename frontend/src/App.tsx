@@ -14,7 +14,7 @@ import { useEffect } from 'react';
 import axios from 'axios';
 
 // Set up axios defaults
-axios.defaults.baseURL = 'http://localhost:5000';
+axios.defaults.baseURL = 'http://localhost:5000/api';
 
 function AppContent() {
   const { isAuthenticated } = useAuth();

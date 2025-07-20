@@ -38,8 +38,8 @@ const Dashboard = () => {
   const fetchData = async () => {
     try {
       const [budgetsResponse, expensesResponse] = await Promise.all([
-        axios.get('/api/budget'),
-        axios.get('/api/expenses')
+        axios.get('/budget'),
+        axios.get('/expenses')
       ]);
       console.log('Budgets from API:', budgetsResponse.data);
       console.log('Expenses from API:', expensesResponse.data);

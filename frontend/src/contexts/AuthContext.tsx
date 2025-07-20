@@ -112,7 +112,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const login = async (email: string, password: string): Promise<User> => {
     try {
       dispatch({ type: 'SET_LOADING', payload: true });
-      const response = await axios.post('/api/auth/login', { email, password });
+      const response = await axios.post('/auth/login', { email, password });
       
       const userData = response.data;
       localStorage.setItem('token', userData.token);
@@ -130,7 +130,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const register = async (name: string, email: string, password: string): Promise<User> => {
     try {
       dispatch({ type: 'SET_LOADING', payload: true });
-      const response = await axios.post('/api/auth/register', { name, email, password });
+      const response = await axios.post('/auth/register', { name, email, password });
       
       const userData = response.data;
       localStorage.setItem('token', userData.token);
@@ -158,7 +158,7 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
   const updateProfile = async (updates: { name?: string; email?: string; currentPassword?: string; newPassword?: string }): Promise<User> => {
     try {
       dispatch({ type: 'SET_LOADING', payload: true });
-      const response = await axios.put('/api/auth/settings', updates);
+      const response = await axios.put('/auth/settings', updates);
       const updatedUser = { ...state.user, ...response.data };
       localStorage.setItem('user', JSON.stringify(updatedUser));
       dispatch({ type: 'LOGIN_SUCCESS', payload: { ...updatedUser, token: response.data.token || state.token } });

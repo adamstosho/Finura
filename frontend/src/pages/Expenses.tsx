@@ -49,7 +49,7 @@ const Expenses = () => {
 
   const fetchBudgets = async () => {
     try {
-      const response = await axios.get('/api/budget');
+      const response = await axios.get('/budget');
       setBudgets(response.data);
       if (response.data.length > 0) {
         setSelectedBudget(response.data[0]._id);
@@ -63,7 +63,7 @@ const Expenses = () => {
 
   const fetchExpenses = async (budgetId: string) => {
     try {
-      const response = await axios.get(`/api/expenses?budgetId=${budgetId}`);
+      const response = await axios.get(`/expenses?budgetId=${budgetId}`);
       setExpenses(response.data);
     } catch (error) {
       console.error('Error fetching expenses:', error);
@@ -79,7 +79,7 @@ const Expenses = () => {
         date: new Date(formData.date).toISOString()
       };
 
-      await axios.post('/api/expenses', expenseData);
+      await axios.post('/expenses', expenseData);
       fetchExpenses(selectedBudget);
       setShowModal(false);
       resetForm();
@@ -91,7 +91,7 @@ const Expenses = () => {
   const handleDelete = async (id: string) => {
     if (window.confirm('Are you sure you want to delete this expense?')) {
       try {
-        await axios.delete(`/api/expenses/${id}`);
+        await axios.delete(`/expenses/${id}`);
         fetchExpenses(selectedBudget);
       } catch (error) {
         console.error('Error deleting expense:', error);
