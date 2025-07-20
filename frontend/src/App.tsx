@@ -14,7 +14,7 @@ import { useEffect } from 'react';
 import axios from 'axios';
 
 // Set up axios defaults
-axios.defaults.baseURL = 'http://localhost:5000/api';
+axios.defaults.baseURL = 'https://finura.onrender.com/api';
 
 function AppContent() {
   const { isAuthenticated } = useAuth();

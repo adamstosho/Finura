@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Plus, Edit2, Trash2, DollarSign } from 'lucide-react';
+import { Plus, Edit2, Trash2 } from 'lucide-react';
 import axios from 'axios';
 
 interface Budget {
@@ -250,7 +250,7 @@ const Budgets = () => {
                     value={formData.month}
                     onChange={(e) => setFormData(prev => ({ ...prev, month: e.target.value }))}
                     className="w-full px-3 py-2 border border-light-gray rounded-lg focus:outline-none focus:ring-2 focus:ring-finura-blue"
-                    placeholder="e.g., January 2024"
+                    placeholder="e.g., July 2025"
                     required
                   />
                 </div>

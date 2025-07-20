@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "http://localhost:5000/api",
+      "url": "https://finura.onrender.com/api",
       "description": "Local server"
     }
   ],
