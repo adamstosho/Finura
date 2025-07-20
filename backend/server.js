@@ -25,7 +25,7 @@ if (process.env.NODE_ENV === 'development') {
   app.use(morgan('dev'));
 }
 app.use(cors({
-  origin: ['http://localhost:3004', 'https://finuraa.vercel.app', 'http://localhost:5173', 'http://localhost:3000', 'http://localhost:3001', 'http://localhost:3003'],
+  origin: ['http://localhost:3004', 'https://finuura.vercel.app', 'http://localhost:5173', 'http://localhost:3000', 'http://localhost:3001', 'http://localhost:3003'],
   credentials: true,
 }));
 app.use(express.json());
