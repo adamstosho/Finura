@@ -106,6 +106,42 @@ Many people struggle to keep track of their income, spending, and savings. Witho
    ```
 4. Open your browser and go to `http://localhost:5173` (or the port shown in your terminal).
 
+# Preview of the App Interface 
+
+![screenshot](/frontend/public/screenshot/screencapture-finuura-vercel-app-2025-07-20-17_57_02.png)
+This the landing page of the app
+
+![screenshot](/frontend/public/screenshot/screencapture-finuura-vercel-app-register-2025-07-20-17_57_42.png)
+Registration page
+
+![screenshot](/frontend/public/screenshot/screencapture-finuura-vercel-app-login-2025-07-20-17_58_18.png)
+The login interface 
+
+![screenshot](/frontend/public/screenshot/screencapture-finuura-vercel-app-2025-07-20-17_58_30.png)
+User Dashboars before logging the budget and expenses
+
+![screenshot](/frontend/public/screenshot/screencapture-finuura-vercel-app-budgets-2025-07-20-18_00_52.png)
+The budget logging modal in the budget page
+
+![screenshot](/frontend/public/screenshot/screencapture-finuura-vercel-app-budgets-2025-07-20-18_01_41.png)
+Overview of the budget field after logging the budget for the month
+
+![screenshot](/frontend/public/screenshot/screencapture-finuura-vercel-app-expenses-2025-07-20-18_02_19.png)
+Overview of the expenses page before logging the expense for the month 
+
+![screenshot](/frontend/public/screenshot/screencapture-finuura-vercel-app-expenses-2025-07-20-18_06_11.png)
+Overview of the expenses page after the logging has been done for the month. Note that, the expenses you can log is strictly relative to the budget category, this is actually done to control the finances.
+
+![screenshot](/frontend/public/screenshot/screencapture-finuura-vercel-app-2025-07-20-18_08_01%20(1).png)
+The dashbaord visualizing the statistics of the budget and expenses after logging the budget and expenses for the month
+
+![screenshot](/frontend/public/screenshot/screencapture-finuura-vercel-app-profile-2025-07-20-18_06_25.png)
+User profile page, where users can view their details and apply for changes
+
+![screenshot](/frontend/public/screenshot/screencapture-finuura-vercel-app-profile-2025-07-20-18_06_40.png)
+The modal in the profile page where profile chanfes can be made 
+
+
 ## License
 This project is licensed under the MIT License. See the [LICENSE](./LICENSE) file for details.
 
