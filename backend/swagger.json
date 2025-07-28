@@ -7,7 +7,7 @@
   },
   "servers": [
     {
-      "url": "https://finura.onrender.com/api",
+      "url": "https://finura-fr2b.vercel.app/api",
       "description": "Local server"
     }
   ],
