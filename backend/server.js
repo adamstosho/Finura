@@ -30,12 +30,12 @@ app.use(cors({
 }));
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.status(200).json({ message: "Welcome to the API" });
+});
+
 // Swagger docs
 app.use('/api-docs', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
-
-app.get('/', (req, res) => {
-  res.send('Server is running');
-});
 
 app.get("/health", (req, res) => {
   res.status(200).json({
