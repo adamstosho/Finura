@@ -3,6 +3,7 @@ import { AuthProvider } from './contexts/AuthContext';
 import { useAuth } from './contexts/AuthContext';
 import ProtectedRoute from './components/ProtectedRoute';
 import Layout from './components/Layout';
+import ErrorBoundary from './components/ErrorBoundary';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
@@ -13,8 +14,9 @@ import Landing from './pages/Landing';
 import { useEffect } from 'react';
 import axios from 'axios';
 
-// Set up axios defaults
-axios.defaults.baseURL = 'https://finura-fr2b.vercel.app/api';
+// Set up axios defaults - Update this to your actual backend URL
+const API_BASE_URL = import.meta.env.VITE_API_URL || 'https://finuura.vercel.app/api';
+axios.defaults.baseURL = API_BASE_URL;
 
 function AppContent() {
   const { isAuthenticated } = useAuth();
@@ -94,9 +96,11 @@ function AppContent() {
 
 function App() {
   return (
-    <AuthProvider>
-      <AppContent />
-    </AuthProvider>
+    <ErrorBoundary>
+      <AuthProvider>
+        <AppContent />
+      </AuthProvider>
+    </ErrorBoundary>
   );
 }
 

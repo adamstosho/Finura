@@ -1,9 +1,8 @@
 const CACHE_NAME = 'finura-v1';
 const urlsToCache = [
   '/',
-  '/static/js/bundle.js',
-  '/static/css/main.css',
-  '/manifest.json'
+  '/index.html',
+  '/manifest.webmanifest'
 ];
 
 self.addEventListener('install', (event) => {

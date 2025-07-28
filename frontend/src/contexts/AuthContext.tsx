@@ -98,14 +98,28 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
 
   // Check if user is logged in on app start
   useEffect(() => {
+    console.log('AuthProvider: Checking authentication status...');
     const token = localStorage.getItem('token');
     const user = localStorage.getItem('user');
     
+    console.log('AuthProvider: Token found:', !!token);
+    console.log('AuthProvider: User found:', !!user);
+    
     if (token && user) {
-      dispatch({
-        type: 'LOGIN_SUCCESS',
-        payload: { ...JSON.parse(user), token },
-      });
+      try {
+        const userData = JSON.parse(user);
+        console.log('AuthProvider: Restoring user session:', userData.email);
+        dispatch({
+          type: 'LOGIN_SUCCESS',
+          payload: { ...userData, token },
+        });
+      } catch (error) {
+        console.error('AuthProvider: Error parsing user data:', error);
+        localStorage.removeItem('token');
+        localStorage.removeItem('user');
+      }
+    } else {
+      console.log('AuthProvider: No stored authentication found');
     }
   }, []);
 

@@ -22,10 +22,6 @@ export default {
         'hero-gradient': 'linear-gradient(90deg, #1A6AFF 0%, #2FFFCF 100%)',
         'button-gradient': 'linear-gradient(90deg, #1A6AFF 0%, #FF5C7C 100%)',
       },
-      animation: {
-        'fadeIn': 'fadeIn 0.5s ease-in-out',
-        'slideIn': 'slideIn 0.3s ease-out',
-      },
       keyframes: {
         fadeIn: {
           '0%': { opacity: '0' },
@@ -35,28 +31,21 @@ export default {
           '0%': { transform: 'translateY(-10px)', opacity: '0' },
           '100%': { transform: 'translateY(0)', opacity: '1' },
         },
-
-        keyframes: {
-          bounceBlink: {
-            '0%, 100%': { transform: 'translateY(0)', opacity: 1 },
-            '50%': { transform: 'translateY(-6px)', opacity: 0.6 },
-          },
-          textBlink: {
-            '0%, 100%': { opacity: 1 },
-            '50%': { opacity: 0.4 },
-          },
-          fadeIn: {
-            '0%': { opacity: 0, transform: 'translateY(10px)' },
-            '100%': { opacity: 1, transform: 'translateY(0)' },
-          },
+        bounceBlink: {
+          '0%, 100%': { transform: 'translateY(0)', opacity: 1 },
+          '50%': { transform: 'translateY(-6px)', opacity: 0.6 },
         },
-
-        animation: {
-          'bounce-blink': 'bounceBlink 2s ease-in-out infinite',
-          'text-blink': 'textBlink 3s ease-in-out infinite',
-          'fade-in': 'fadeIn 1s ease-out forwards',
+        textBlink: {
+          '0%, 100%': { opacity: 1 },
+          '50%': { opacity: 0.4 },
         },
-      
+      },
+      animation: {
+        'fadeIn': 'fadeIn 0.5s ease-in-out',
+        'slideIn': 'slideIn 0.3s ease-out',
+        'bounce-blink': 'bounceBlink 2s ease-in-out infinite',
+        'text-blink': 'textBlink 3s ease-in-out infinite',
+        'fade-in': 'fadeIn 1s ease-out forwards',
       },
     },
   },
